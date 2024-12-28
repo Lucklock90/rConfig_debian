@@ -52,7 +52,7 @@ f_install_base_pkgs() {
     echo "${green}Starting base package installation... Hold on a few minutes!${reset}"
     sleep 1
 
-    sudo apt install -y build-essential curl traceroute tree zip unzip vim telnet git htop dialog unzip apt-utils lsb-release apt-transport-https ca-certificates
+    sudo apt install -y build-essential curl traceroute tree zip unzip vim telnet git ufw htop dialog unzip apt-utils lsb-release apt-transport-https ca-certificates
     
     echo ""
     echo "${green}Base package installation update completed!${reset}"
