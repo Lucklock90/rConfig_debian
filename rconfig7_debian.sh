@@ -147,7 +147,7 @@ f_install_lamp() {
     sudo apt update
     #sudo apt -y install lsb-release apt-transport-https ca-certificates curl build-essential
     sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
-    sudo echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" |sudo tee /etc/apt/sources.list.d/php.list
+    sudo echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list
     sudo apt update && sudo apt upgrade -y
 
     sudo apt install -y php${PHPVER} php${PHPVER}-cli php${PHPVER}-gd php${PHPVER}-curl php${PHPVER}-mysql php${PHPVER}-ldap php${PHPVER}-zip php${PHPVER}-mbstring php${PHPVER}-common php${PHPVER}-ldap php${PHPVER}-gmp libapache2-mod-php${PHPVER} php${PHPVER}-xml php${PHPVER}-curl
