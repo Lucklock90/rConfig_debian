@@ -15,7 +15,7 @@ fi
 # Check for Debian 12 specifically (using /etc/os-release)
 if [ -f /etc/os-release ]; then
     . /etc/os-release
-    if [ "$ID" == "debian" ] && [ "$VERSION_ID" == "12" ]; then
+    if [ "$ID" = "debian" ] && [ "$VERSION_ID" = "12" ]; then
         HTTPDDIR=/etc/apache2/sites-enabled
     fi
 fi
@@ -41,7 +41,7 @@ if [ -f /etc/redhat-release ]; then
 fi
 
 # For Debian-based systems
-if [ -f /etc/lsb-release ] || ([ -f /etc/os-release ] && [ "$ID" == "debian" ]); then
+if [ -f /etc/lsb-release ] || ([ -f /etc/os-release ] && [ "$ID" = "debian" ]); then
     sudo chown -R www-data:www-data /var/www/html/rconfig
     sudo chown -R $USER:www-data /var/www/html/rconfig
     systemctl restart apache2
@@ -54,6 +54,6 @@ fi
 #    httpd -S
 #fi
 
-#if [ -f /etc/lsb-release ] || ([ -f /etc/os-release ] && [ "$ID" == "debian" ]); then
+#if [ -f /etc/lsb-release ] || ([ -f /etc/os-release ] && [ "$ID" = "debian" ]); then
 #    apache2ctl -S
 #fi
